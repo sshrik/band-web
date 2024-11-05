@@ -1,0 +1,7 @@
+li {
+  padding-top: 6px;
+}
+
+li li {
+  margin-left: 16px;
+}
