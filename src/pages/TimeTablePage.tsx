@@ -2,7 +2,7 @@ import { Group, PageWrapper, Stack } from "@/components/Container";
 import OrderBadge from "@/components/display/OrderBadge";
 import TeamNameBadge from "@/components/display/TeamNameBadge";
 import Footer from "@/components/Footer";
-import { Text, Header } from "@/components/Typography";
+import { Text } from "@/components/Typography";
 import { Team } from "@/models/Team";
 import { darkGray } from "@/styles/color";
 
@@ -15,7 +15,11 @@ const TimeTablePage: React.FC<TimeTablePageProps> = (props) => {
 
   return (
     <PageWrapper style={{ paddingTop: 0, gap: "4rem" }}>
-      <Header $size="lg">Time Table</Header>
+      <img
+        src="/public/images/TimeTableImage.png"
+        alt="TimeTableImage"
+        style={{ width: "20rem", height: "auto" }}
+      />
       <Stack $gap="1.5rem" style={{ padding: "0px 1rem", width: "100%" }}>
         {teams.map((team) => {
           const {
@@ -57,7 +61,12 @@ const TimeTablePage: React.FC<TimeTablePageProps> = (props) => {
                           {member}
                         </Text>
                         {index !== members.length - 1 && (
-                          <Text style={{ fontWeight: 400 }}>·</Text>
+                          <Text
+                            key={`${index}-dot`}
+                            style={{ fontWeight: 400 }}
+                          >
+                            ·
+                          </Text>
                         )}
                       </>
                     );
@@ -72,7 +81,12 @@ const TimeTablePage: React.FC<TimeTablePageProps> = (props) => {
                           {member}
                         </Text>
                         {index !== additionalMembers.length - 1 && (
-                          <Text style={{ fontWeight: 400 }}>·</Text>
+                          <Text
+                            key={`${index}-dot`}
+                            style={{ fontWeight: 400 }}
+                          >
+                            ·
+                          </Text>
                         )}
                       </>
                     ))}

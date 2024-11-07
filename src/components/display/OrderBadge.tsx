@@ -23,7 +23,6 @@ const OrderBadge: React.FC<OrderBadgeProps> = (props) => {
       <Header
         style={{
           color: white,
-          marginBottom: "-0.25rem",
           fontWeight: 900,
         }}
       >

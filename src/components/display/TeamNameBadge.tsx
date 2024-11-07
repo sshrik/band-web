@@ -18,7 +18,15 @@ const TeamNameBadge: React.FC<TeamNameBadgeProps> = (props) => {
         width: "100%",
       }}
     >
-      <Header style={{ fontWeight: 900, color: red }}>{name}</Header>
+      <Header
+        style={{
+          fontFamily: "BobaeJindo",
+          fontWeight: 400,
+          color: red,
+        }}
+      >
+        {name}
+      </Header>
     </Center>
   );
 };
