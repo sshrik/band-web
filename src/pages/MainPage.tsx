@@ -1,17 +1,12 @@
 import { Center, Group, PageWrapper, Stack } from "@/components/Container";
 import { Anchor, Caption, Header, Text } from "@/components/Typography";
-import { gray, green, red } from "@/styles/color";
+import { blue, gray, green, red } from "@/styles/color";
 import "./MainPage.css";
+import Footer from "@/components/Footer";
 
 const MainPage: React.FC = () => {
   return (
-    <PageWrapper
-      style={{
-        justifyContent: "center",
-        alignItems: "center",
-        gap: "0.8rem",
-      }}
-    >
+    <PageWrapper>
       <Header $size="sm">우아한형제들 밴드의민족 겨울 정기공연</Header>
       <Stack style={{ justifyContent: "center", alignItems: "center" }}>
         <img
@@ -59,8 +54,18 @@ const MainPage: React.FC = () => {
         <img
           src="/public/images/MainImage.png"
           alt="메인 이미지"
-          style={{ width: "100%" }}
+          style={{ width: "100%", maxHeight: "20rem" }}
         />
+      </Center>
+      <Center>
+        <Anchor
+          $underline
+          $size="xl"
+          style={{ color: blue }}
+          href={"/timetable"}
+        >
+          공연 순서 보러가기
+        </Anchor>
       </Center>
       <Center style={{ flex: 1 }}>
         <Stack
@@ -140,11 +145,7 @@ const MainPage: React.FC = () => {
           </ul>
         </Stack>
       </Center>
-      <Center style={{ padding: "4px" }}>
-        <Caption $size="sm">
-          Copyright 2024. 밴드의 민족. All rights reserved.
-        </Caption>
-      </Center>
+      <Footer />
     </PageWrapper>
   );
 };

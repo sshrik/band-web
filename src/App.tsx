@@ -23,6 +23,28 @@ const teams: Team[] = [
     additionalMembers: ["신성환", "윤보민"],
     teamId: 2,
   },
+  {
+    startAt: "18:20",
+    endAt: "19:00",
+    teamName: "민호조",
+    members: [
+      "강범준",
+      "곽해솔",
+      "구세라",
+      "김기문",
+      "김도원",
+      "김민호",
+      "송지은",
+    ],
+    teamId: 3,
+  },
+  {
+    startAt: "19:00",
+    endAt: "19:40",
+    teamName: "은옥조",
+    members: ["김경준", "박가진", "이범희", "이신아", "임현호", "조은옥"],
+    teamId: 4,
+  },
 ];
 
 const songs: Song[][] = [

@@ -61,12 +61,27 @@ export const PageWrapper = styled.div`
   min-height: 100vh;
   height: 100%;
   overflow-y: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+
+  @media (min-width: 320px) {
+    padding-top: 4rem;
+  }
 
   @media (min-width: 375px) {
     padding-top: 2rem;
   }
 
   @media (min-width: 390px) {
+    padding-top: 7rem;
+  }
+
+  @media (min-width: 768px) {
+    padding-top: 2rem;
+  }
+
+  @media (min-width: 1000px) {
     padding-top: 7rem;
   }
 `;
