@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 // 16px 기준
@@ -37,7 +38,7 @@ export const Text = styled.p<TypographyProps>`
   text-decoration: ${({ $underline }) => ($underline ? "underline" : "none")};
 `;
 
-export const Anchor = styled.a<TypographyProps>`
+export const Anchor = styled(Link)<TypographyProps>`
   font-size: ${({ $size }) => {
     switch ($size) {
       case "xs":

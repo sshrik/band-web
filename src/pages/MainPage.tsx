@@ -63,7 +63,7 @@ const MainPage: React.FC = () => {
         <Anchor
           $underline
           $size="lg"
-          href={"/timetable"}
+          to="/timetable"
           style={{ color: blue, zIndex: 20 }}
         >
           공연 순서 보러가기
