@@ -1,6 +1,8 @@
 import { Center, Group, PageWrapper, Stack } from "@/components/Container";
 import { Anchor, Caption, Header, Text } from "@/components/Typography";
 import { blue, gray, green, red } from "@/styles/color";
+import TitleImage from "@/assets/images/Title.png";
+import MainImage from "@/assets/images/MainImage.png";
 import "./MainPage.css";
 import Footer from "@/components/Footer";
 
@@ -10,7 +12,7 @@ const MainPage: React.FC = () => {
       <Header $size="sm">우아한형제들 밴드의민족 겨울 정기공연</Header>
       <Stack style={{ justifyContent: "center", alignItems: "center" }}>
         <img
-          src="/public/images/Title.png"
+          src={TitleImage}
           alt="우아한형제들 밴드의민족 타이틀 이미지"
           style={{ height: "140px" }}
         />
@@ -52,7 +54,7 @@ const MainPage: React.FC = () => {
       </Group>
       <Center>
         <img
-          src="/public/images/MainImage.png"
+          src={MainImage}
           alt="메인 이미지"
           style={{ width: "100%", maxHeight: "20rem" }}
         />

@@ -6,6 +6,8 @@ import { Text } from "@/components/Typography";
 import { Team } from "@/models/Team";
 import { darkGray } from "@/styles/color";
 import { useNavigate } from "react-router";
+import LeftIcon from "@/assets/icons/chevron-left.svg";
+import TimeTableImage from "@/assets/images/TimeTableImage.png";
 
 type TimeTablePageProps = {
   teams: Team[];
@@ -32,11 +34,11 @@ const TimeTablePage: React.FC<TimeTablePageProps> = (props) => {
           top: "1rem",
         }}
       >
-        <img src="/public/icons/chevron-left.svg" alt="chevron-left" />
+        <img src={LeftIcon} alt="chevron-left" />
         <Text>홈으로 돌아가기</Text>
       </Group>
       <img
-        src="/public/images/TimeTableImage.png"
+        src={TimeTableImage}
         alt="TimeTableImage"
         style={{ width: "20rem", height: "auto" }}
       />

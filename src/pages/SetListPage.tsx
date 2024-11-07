@@ -7,6 +7,8 @@ import { Song } from "@/models/Song";
 import { Team } from "@/models/Team";
 import { darkGray, gray } from "@/styles/color";
 import { useNavigate, useParams } from "react-router";
+import LeftIcon from "@/assets/icons/chevron-left.svg";
+import SetListImage from "@/assets/images/SetListImage.png";
 
 type SetListPageProps = {
   teams: Team[];
@@ -47,12 +49,12 @@ const SetListPage: React.FC<SetListPageProps> = (props) => {
           top: "1rem",
         }}
       >
-        <img src="/public/icons/chevron-left.svg" alt="chevron-left" />
+        <img src={LeftIcon} alt="chevron-left" />
         <Text>목록으로 돌아가기</Text>
       </Group>
       <img
-        src="/public/images/SetListImage.png"
-        alt="TimeTableImage"
+        src={SetListImage}
+        alt="SetListImage"
         style={{ width: "15rem", height: "auto", paddingBottom: "2rem" }}
       />
       <Group key={teamId} $gap="0.5rem" style={{ width: "calc(100% - 4rem)" }}>
