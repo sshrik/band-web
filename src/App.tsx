@@ -78,6 +78,22 @@ const songs: Song[][] = [
     { name: "맞네", artist: "루시" },
     { name: "Welcome to the Show", artist: "DAY6" },
   ],
+  [
+    { name: "대관람차", artist: "QWER" },
+    { name: "녹아내려요", artist: "DAY6" },
+    { name: "Loveholic", artist: "러브홀릭" },
+    { name: "반딧불이", artist: "터치드" },
+    { name: "불꽃놀이", artist: "하현상" },
+    { name: "에필로그", artist: "정승환" },
+  ],
+  [
+    { name: "annie.", artist: "wave to earth" },
+    { name: "Find Me!", artist: "The Poles" },
+    { name: "Destiny", artist: "SURL" },
+    { name: "Tik Tak Tok", artist: "실리카겔" },
+    { name: "그건 아마 우리의 잘못은 아닐거야", artist: "백예린" },
+    { name: "민수는 혼란스럽다", artist: "민수" },
+  ],
 ];
 
 const App: React.FC = () => {
@@ -89,12 +105,8 @@ const App: React.FC = () => {
         <Route path="/" element={<MainPage />} />
         <Route path="/timetable" element={<TimeTablePage teams={teams} />} />
         <Route
-          path="/set/team1"
-          element={<SetListPage team={teams[0]} songs={songs[0]} />}
-        />
-        <Route
-          path="/set/team2"
-          element={<SetListPage team={teams[1]} songs={songs[1]} />}
+          path="/setList/:id"
+          element={<SetListPage teams={teams} songs={songs} />}
         />
       </Routes>
     </BrowserRouter>

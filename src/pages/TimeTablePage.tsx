@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Text } from "@/components/Typography";
 import { Team } from "@/models/Team";
 import { darkGray } from "@/styles/color";
+import { useNavigate } from "react-router";
 
 type TimeTablePageProps = {
   teams: Team[];
@@ -13,8 +14,27 @@ type TimeTablePageProps = {
 const TimeTablePage: React.FC<TimeTablePageProps> = (props) => {
   const { teams } = props;
 
+  const navigate = useNavigate();
+
+  const handleNavigate = (teamId: number) => {
+    navigate(`/setList/${teamId}`);
+  };
+
   return (
     <PageWrapper style={{ paddingTop: 0, gap: "4rem" }}>
+      <Group
+        $gap="0.5rem"
+        onClick={() => navigate("/")}
+        style={{
+          alignItems: "center",
+          position: "absolute",
+          left: "1rem",
+          top: "1rem",
+        }}
+      >
+        <img src="/public/icons/chevron-left.svg" alt="chevron-left" />
+        <Text>홈으로 돌아가기</Text>
+      </Group>
       <img
         src="/public/images/TimeTableImage.png"
         alt="TimeTableImage"
@@ -32,17 +52,21 @@ const TimeTablePage: React.FC<TimeTablePageProps> = (props) => {
           } = team;
 
           return (
-            <Group key={teamId} $gap="0.5rem">
+            <Group
+              key={teamId}
+              $gap="0.5rem"
+              onClick={() => handleNavigate(teamId)}
+            >
               <OrderBadge order={teamId} style={{ marginTop: "1.5rem" }} />
               <Stack $gap="0.25rem" style={{ width: "calc(100% - 3.25rem)" }}>
                 <Group $gap="0.25rem" style={{ paddingLeft: "1rem" }}>
-                  <Text $bold style={{ color: darkGray }}>
+                  <Text $size="xl" style={{ fontWeight: 800, color: darkGray }}>
                     {startAt}
                   </Text>
-                  <Text $bold style={{ color: darkGray }}>
+                  <Text $size="xl" style={{ fontWeight: 800, color: darkGray }}>
                     -
                   </Text>
-                  <Text $bold style={{ color: darkGray }}>
+                  <Text $size="xl" style={{ fontWeight: 800, color: darkGray }}>
                     {endAt}
                   </Text>
                 </Group>

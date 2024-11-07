@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 
 const MainPage: React.FC = () => {
   return (
-    <PageWrapper>
+    <PageWrapper style={{ gap: "0.8rem" }}>
       <Header $size="sm">우아한형제들 밴드의민족 겨울 정기공연</Header>
       <Stack style={{ justifyContent: "center", alignItems: "center" }}>
         <img
@@ -60,14 +60,14 @@ const MainPage: React.FC = () => {
       <Center>
         <Anchor
           $underline
-          $size="xl"
-          style={{ color: blue }}
+          $size="lg"
           href={"/timetable"}
+          style={{ color: blue, zIndex: 20 }}
         >
           공연 순서 보러가기
         </Anchor>
       </Center>
-      <Center style={{ flex: 1 }}>
+      <Center style={{ flex: 1, marginTop: "-2rem" }}>
         <Stack
           $gap={0}
           style={{
@@ -82,7 +82,7 @@ const MainPage: React.FC = () => {
           </Text>
           <ul>
             <li>
-              <Group $gap={2}>
+              <Group $gap="0.25rem">
                 <Text $size="sm">공연 시간은 총 100분으로 </Text>
                 <Text $size="sm" style={{ color: red, fontWeight: 600 }}>
                   17:00부터 20:40
