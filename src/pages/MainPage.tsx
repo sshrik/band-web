@@ -114,33 +114,21 @@ const MainPage: React.FC = () => {
             <li>
               <Stack>
                 <Group $noWrap>
-                  <Text style={{ paddingRight: "4px" }}>포스터 내</Text>
+                  <Text style={{ paddingRight: "0.25rem" }}>포스터 내</Text>
                   <Text $bold>QR 코드</Text>
                   <Text>를 통해서 자율모금을 진행하고 있으니</Text>
                 </Group>
-                <Text> 많은 관심 부탁드립니다.</Text>
+                <Group
+                  $gap="0.25rem"
+                  $noWrap
+                  style={{ alignItems: "flex-end" }}
+                >
+                  <Text> 많은 관심 부탁드립니다.</Text>
+                  <Text $size="xs" style={{ color: green }}>
+                    카카오뱅크 12345 구세라
+                  </Text>
+                </Group>
               </Stack>
-              <ul>
-                <li>
-                  <Text>{`계좌번호 : ${
-                    import.meta.env.VITE_PAYMENT_ACCOUNT
-                  }`}</Text>
-                </li>
-                <li>
-                  <Anchor
-                    $bold
-                    $underline
-                    target="_blank"
-                    rel="noreferrer"
-                    href={import.meta.env.VITE_PAYMENT_LINK}
-                    style={{
-                      color: green,
-                    }}
-                  >
-                    송금 링크
-                  </Anchor>
-                </li>
-              </ul>
             </li>
           </ul>
         </Stack>
