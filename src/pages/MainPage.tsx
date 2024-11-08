@@ -97,9 +97,9 @@ const MainPage: React.FC = () => {
             <ul>
               <li>
                 <Group $gap="0.25rem">
-                  <Text $size="sm">공연 시간은 총 100분으로 </Text>
+                  <Text $size="sm">공연 시간은 총 200분으로 </Text>
                   <Text $size="sm" style={{ color: red, fontWeight: 600 }}>
-                    17:00부터 20:40
+                    17:00부터 19:40
                   </Text>
                   <Text $size="sm">입니다.</Text>
                 </Group>
