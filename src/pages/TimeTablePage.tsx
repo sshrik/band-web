@@ -34,8 +34,8 @@ const TimeTablePage: React.FC<TimeTablePageProps> = (props) => {
           top: "1rem",
         }}
       >
-        <ChevronLeft style={{ width: "16px" }} />
-        <Text>홈으로 돌아가기</Text>
+        <ChevronLeft style={{ width: "12px" }} />
+        <Text $size="xs">홈으로 돌아가기</Text>
       </Group>
       <Flex style={{ flex: 1 }} />
       <img

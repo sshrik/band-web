@@ -10,6 +10,7 @@ import { useNavigate, useParams } from "react-router";
 import ChevronLeft from "@/assets/icons/chevron-left.svg?react";
 import ChevronRight from "@/assets/icons/chevron-right.svg?react";
 import SetListImage from "@/assets/images/SetListImage.png";
+import { useSwipeable } from "react-swipeable";
 
 type SetListPageProps = {
   teams: Team[];
@@ -33,6 +34,18 @@ const SetListPage: React.FC<SetListPageProps> = (props) => {
     navigate(`/setList/${nextId}`);
   };
 
+  const handlers = useSwipeable({
+    onSwiped: ({ dir }) => {
+      if (dir === "Right") {
+        handleNavigateBefore();
+      }
+
+      if (dir === "Left") {
+        handleNavigateNext();
+      }
+    },
+  });
+
   if (!id || !teams[Number(id) - 1]) {
     return <PageWrapper>Not Found Page</PageWrapper>;
   }
@@ -49,7 +62,7 @@ const SetListPage: React.FC<SetListPageProps> = (props) => {
   const songList = songs[Number(id) - 1];
 
   return (
-    <PageWrapper style={{ paddingTop: 0, gap: "2rem" }}>
+    <PageWrapper {...handlers} style={{ paddingTop: 0, gap: "2rem" }}>
       <Group
         $gap="0.25rem"
         onClick={() => navigate("/timetable")}
@@ -60,8 +73,8 @@ const SetListPage: React.FC<SetListPageProps> = (props) => {
           top: "1rem",
         }}
       >
-        <ChevronLeft style={{ width: "16px" }} />
-        <Text>목록으로 돌아가기</Text>
+        <ChevronLeft style={{ width: "12px" }} />
+        <Text $size="xs">목록으로 돌아가기</Text>
       </Group>
       <Flex style={{ flex: 1 }} />
       <Group
