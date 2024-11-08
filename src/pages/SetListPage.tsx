@@ -8,6 +8,7 @@ import { Team } from "@/models/Team";
 import { darkGray, gray } from "@/styles/color";
 import { useNavigate, useParams } from "react-router";
 import ChevronLeft from "@/assets/icons/chevron-left.svg?react";
+import ChevronRight from "@/assets/icons/chevron-right.svg?react";
 import SetListImage from "@/assets/images/SetListImage.png";
 
 type SetListPageProps = {
@@ -21,6 +22,16 @@ const SetListPage: React.FC<SetListPageProps> = (props) => {
   const { id } = useParams<{ id: string }>();
 
   const navigate = useNavigate();
+
+  const handleNavigateBefore = () => {
+    const beforeId = Number(id) - 1 === 0 ? teams.length : Number(id) - 1;
+    navigate(`/setList/${beforeId}`);
+  };
+
+  const handleNavigateNext = () => {
+    const nextId = Number(id) === teams.length ? 1 : Number(id) + 1;
+    navigate(`/setList/${nextId}`);
+  };
 
   if (!id || !teams[Number(id) - 1]) {
     return <PageWrapper>Not Found Page</PageWrapper>;
@@ -53,11 +64,27 @@ const SetListPage: React.FC<SetListPageProps> = (props) => {
         <Text>목록으로 돌아가기</Text>
       </Group>
       <Flex style={{ flex: 1 }} />
-      <img
-        src={SetListImage}
-        alt="SetListImage"
-        style={{ width: "15rem", height: "auto", paddingBottom: "2rem" }}
-      />
+      <Group
+        style={{
+          justifyContent: "space-between",
+          alignItems: "center",
+          paddingBottom: "2rem",
+        }}
+      >
+        <ChevronLeft
+          onClick={handleNavigateBefore}
+          style={{ marginLeft: "-0.25rem", width: "36px", height: "36px" }}
+        />
+        <img
+          src={SetListImage}
+          alt="SetListImage"
+          style={{ width: "15rem", height: "auto" }}
+        />
+        <ChevronRight
+          onClick={handleNavigateNext}
+          style={{ width: "36px", height: "36px" }}
+        />
+      </Group>
       <Group key={teamId} $gap="0.5rem" style={{ width: "calc(100% - 4rem)" }}>
         <OrderBadge order={teamId} style={{ marginTop: "1.3rem" }} />
         <Stack $gap="0.25rem" style={{ width: "calc(100% - 3.25rem)" }}>
@@ -94,9 +121,10 @@ const SetListPage: React.FC<SetListPageProps> = (props) => {
       <Stack $gap="2rem" style={{ width: "calc(100% - 5rem)" }}>
         {songList.map((song, index) => (
           <Group
-            $gap="0.5rem"
+            $gap="2rem"
             key={index}
             style={{
+              paddingBottom: "0.5rem",
               borderBottom: `1px solid ${darkGray}`,
               alignItems: "center",
             }}
@@ -104,7 +132,7 @@ const SetListPage: React.FC<SetListPageProps> = (props) => {
             <Header style={{ fontWeight: 700, color: darkGray }}>
               {index + 1}
             </Header>
-            <Group $gap="0.25rem">
+            <Group $gap="0.5rem 0.25rem" style={{ flexWrap: "wrap" }}>
               <Header $size="sm" style={{ whiteSpace: "pre", fontWeight: 400 }}>
                 {song.artist}
               </Header>
