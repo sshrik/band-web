@@ -1,4 +1,4 @@
-import { Group, PageWrapper, Stack } from "@/components/Container";
+import { Flex, Group, PageWrapper, Stack } from "@/components/Container";
 import OrderBadge from "@/components/display/OrderBadge";
 import TeamNameBadge from "@/components/display/TeamNameBadge";
 import Footer from "@/components/Footer";
@@ -6,7 +6,7 @@ import { Text } from "@/components/Typography";
 import { Team } from "@/models/Team";
 import { darkGray } from "@/styles/color";
 import { useNavigate } from "react-router";
-import LeftIcon from "@/assets/icons/chevron-left.svg";
+import ChevronLeft from "@/assets/icons/chevron-left.svg?react";
 import TimeTableImage from "@/assets/images/TimeTableImage.png";
 
 type TimeTablePageProps = {
@@ -25,7 +25,7 @@ const TimeTablePage: React.FC<TimeTablePageProps> = (props) => {
   return (
     <PageWrapper style={{ paddingTop: 0, gap: "4rem" }}>
       <Group
-        $gap="0.5rem"
+        $gap="0.25rem"
         onClick={() => navigate("/")}
         style={{
           alignItems: "center",
@@ -34,9 +34,10 @@ const TimeTablePage: React.FC<TimeTablePageProps> = (props) => {
           top: "1rem",
         }}
       >
-        <img src={LeftIcon} alt="chevron-left" />
+        <ChevronLeft style={{ width: "16px" }} />
         <Text>홈으로 돌아가기</Text>
       </Group>
+      <Flex style={{ flex: 1 }} />
       <img
         src={TimeTableImage}
         alt="TimeTableImage"
@@ -72,7 +73,7 @@ const TimeTablePage: React.FC<TimeTablePageProps> = (props) => {
                     {endAt}
                   </Text>
                 </Group>
-                <TeamNameBadge name={teamName} />
+                <TeamNameBadge withArrow name={teamName} />
                 <Group
                   $gap="0.25rem"
                   style={{
@@ -123,6 +124,7 @@ const TimeTablePage: React.FC<TimeTablePageProps> = (props) => {
           );
         })}
       </Stack>
+      <Flex style={{ flex: 1 }} />
       <Footer />
     </PageWrapper>
   );

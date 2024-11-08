@@ -1,4 +1,4 @@
-import { Group, PageWrapper, Stack } from "@/components/Container";
+import { Flex, Group, PageWrapper, Stack } from "@/components/Container";
 import OrderBadge from "@/components/display/OrderBadge";
 import TeamNameBadge from "@/components/display/TeamNameBadge";
 import Footer from "@/components/Footer";
@@ -7,7 +7,7 @@ import { Song } from "@/models/Song";
 import { Team } from "@/models/Team";
 import { darkGray, gray } from "@/styles/color";
 import { useNavigate, useParams } from "react-router";
-import LeftIcon from "@/assets/icons/chevron-left.svg";
+import ChevronLeft from "@/assets/icons/chevron-left.svg?react";
 import SetListImage from "@/assets/images/SetListImage.png";
 
 type SetListPageProps = {
@@ -40,7 +40,7 @@ const SetListPage: React.FC<SetListPageProps> = (props) => {
   return (
     <PageWrapper style={{ paddingTop: 0, gap: "2rem" }}>
       <Group
-        $gap="0.5rem"
+        $gap="0.25rem"
         onClick={() => navigate("/timetable")}
         style={{
           alignItems: "center",
@@ -49,9 +49,10 @@ const SetListPage: React.FC<SetListPageProps> = (props) => {
           top: "1rem",
         }}
       >
-        <img src={LeftIcon} alt="chevron-left" />
+        <ChevronLeft style={{ width: "16px" }} />
         <Text>목록으로 돌아가기</Text>
       </Group>
+      <Flex style={{ flex: 1 }} />
       <img
         src={SetListImage}
         alt="SetListImage"
@@ -93,7 +94,7 @@ const SetListPage: React.FC<SetListPageProps> = (props) => {
       <Stack $gap="2rem" style={{ width: "calc(100% - 5rem)" }}>
         {songList.map((song, index) => (
           <Group
-            $gap="1rem"
+            $gap="0.5rem"
             key={index}
             style={{
               borderBottom: `1px solid ${darkGray}`,
@@ -103,7 +104,7 @@ const SetListPage: React.FC<SetListPageProps> = (props) => {
             <Header style={{ fontWeight: 700, color: darkGray }}>
               {index + 1}
             </Header>
-            <Group $gap="0.3rem">
+            <Group $gap="0.25rem">
               <Header $size="sm" style={{ whiteSpace: "pre", fontWeight: 400 }}>
                 {song.artist}
               </Header>
@@ -117,6 +118,7 @@ const SetListPage: React.FC<SetListPageProps> = (props) => {
           </Group>
         ))}
       </Stack>
+      <Flex style={{ flex: 1 }} />
       <Footer />
     </PageWrapper>
   );
