@@ -7,6 +7,7 @@ type TypographyProps = {
   $bold?: boolean;
   $italic?: boolean;
   $underline?: boolean;
+  $ff?: "nove" | "dela" | "jiugae" | (string & {});
   // 12.15px, 15.3px, 16px, 17.3px, 18.7px, 20px
   $size?: "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
 };
@@ -35,6 +36,18 @@ export const Text = styled.p<TypographyProps>`
   font-weight: ${({ $bold }) => ($bold ? "bold" : "normal")};
   font-style: ${({ $italic }) => ($italic ? "italic" : "normal")};
   text-decoration: ${({ $underline }) => ($underline ? "underline" : "none")};
+  font-family: ${({ $ff }) => {
+    switch ($ff) {
+      case "nove":
+        return "Nove";
+      case "dela":
+        return "Dela Gothic One";
+      case "jiugae":
+        return "Jiugae";
+      default:
+        return undefined;
+    }
+  }};
 `;
 
 export const Anchor = styled(Link)<TypographyProps>`
@@ -57,6 +70,18 @@ export const Anchor = styled(Link)<TypographyProps>`
   font-weight: ${({ $bold }) => ($bold ? "bold" : "normal")};
   font-style: ${({ $italic }) => ($italic ? "italic" : "normal")};
   text-decoration: ${({ $underline }) => ($underline ? "underline" : "none")};
+  font-family: ${({ $ff }) => {
+    switch ($ff) {
+      case "nove":
+        return "Nove";
+      case "dela":
+        return "Dela Gothic One";
+      case "jiugae":
+        return "Jiugae";
+      default:
+        return undefined;
+    }
+  }};
 
   :visited,
   :hover,
@@ -86,6 +111,7 @@ export const Caption = styled(Text)<CaptionProps>`
 type HeaderProps = {
   // 21.3px, 31.9px, 38.9px
   $size?: "sm" | "md" | "lg";
+  $ff?: "nove" | "dela" | "jiugae" | (string & {});
 };
 
 export const Header = styled.h1<HeaderProps>`
@@ -102,4 +128,16 @@ export const Header = styled.h1<HeaderProps>`
     }
   }};
   font-weight: bold;
+  font-family: ${({ $ff }) => {
+    switch ($ff) {
+      case "nove":
+        return "Nove";
+      case "dela":
+        return "Dela Gothic One";
+      case "jiugae":
+        return "Jiugae";
+      default:
+        return undefined;
+    }
+  }};
 `;
