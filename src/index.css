@@ -48,7 +48,7 @@
   }
 }
 
-@font-face {
+/* @font-face {
   font-family: "Aileron";
   src: url("/public/fonts/aileron/Aileron-Black.otf") format("opentype");
   font-weight: black;
@@ -149,17 +149,22 @@
     format("opentype");
   font-weight: 100;
   font-style: italic;
-}
+}*/
 
 @font-face {
   font-family: "Nove";
   src: url("/public/fonts/Nove.ttf") format("truetype");
 }
 
-@font-face {
+/* @font-face {
   font-family: "BobaeJindo";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/BobaesumJindoTTF.woff2")
     format("woff2");
   font-weight: normal;
   font-style: normal;
+} */
+
+@font-face {
+  font-family: "Jiugae";
+  src: url("/public/fonts/JiugaeOTFR.otf") format("opentype");
 }

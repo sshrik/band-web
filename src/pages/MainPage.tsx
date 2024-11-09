@@ -5,15 +5,21 @@ import {
   PageWrapper,
   Stack,
 } from "@/components/Container";
-import { Anchor, Caption, Header, Text } from "@/components/Typography";
-import { blue, gray, green, red } from "@/styles/color";
+import { Caption, Header, Text } from "@/components/Typography";
+import { gray, green, red } from "@/styles/color";
 import TitleImage from "@/assets/images/Title.png";
 import MainImage from "@/assets/images/MainImage.png";
-import ChevronRight from "@/assets/icons/chevron-right.svg?react";
 import "./MainPage.css";
 import Footer from "@/components/Footer";
+import { useNavigate } from "react-router";
 
 const MainPage: React.FC = () => {
+  const navigate = useNavigate();
+
+  const navigateToTimetable = () => {
+    navigate("/timetable");
+  };
+
   return (
     <PageWrapper style={{ gap: "0.8rem" }}>
       <Header $size="sm">우아한형제들 밴드의민족 겨울 정기공연</Header>
@@ -68,15 +74,24 @@ const MainPage: React.FC = () => {
       </Center>
       <Stack $gap="0.5rem" style={{ flex: 1, paddingBottom: "2rem" }}>
         <Flex style={{ justifyContent: "flex-end", alignItems: "center" }}>
-          <Anchor
-            $underline
-            $size="lg"
-            to="/timetable"
-            style={{ color: blue, zIndex: 20 }}
+          <Group
+            onClick={navigateToTimetable}
+            style={{
+              border: `3px solid ${red}`,
+              padding: "0.5rem 1rem",
+              borderRadius: "10rem",
+            }}
           >
-            공연 순서 보러가기
-          </Anchor>
-          <ChevronRight style={{ width: "16px", stroke: blue }} />
+            <Header
+              style={{
+                fontFamily: "Jiugae",
+                color: red,
+                marginBottom: "-0.5rem",
+              }}
+            >
+              {"공연 순서 보러가기 >>"}
+            </Header>
+          </Group>
         </Flex>
         <Center>
           <Stack

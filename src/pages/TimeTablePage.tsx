@@ -60,7 +60,7 @@ const TimeTablePage: React.FC<TimeTablePageProps> = (props) => {
               $gap="0.5rem"
               onClick={() => handleNavigate(teamId)}
             >
-              <OrderBadge order={teamId} style={{ marginTop: "1.5rem" }} />
+              <OrderBadge order={teamId} style={{ marginTop: "1.57rem" }} />
               <Stack $gap="0.25rem" style={{ width: "calc(100% - 3.25rem)" }}>
                 <Group $gap="0.25rem" style={{ paddingLeft: "1rem" }}>
                   <Text $size="xl" style={{ fontWeight: 800, color: darkGray }}>

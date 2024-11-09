@@ -99,7 +99,7 @@ const SetListPage: React.FC<SetListPageProps> = (props) => {
         />
       </Group>
       <Group key={teamId} $gap="0.5rem" style={{ width: "calc(100% - 4rem)" }}>
-        <OrderBadge order={teamId} style={{ marginTop: "1.3rem" }} />
+        <OrderBadge order={teamId} style={{ marginTop: "1.57rem" }} />
         <Stack $gap="0.25rem" style={{ width: "calc(100% - 3.25rem)" }}>
           <Group $gap="0.25rem" style={{ paddingLeft: "1rem" }}>
             <Text $size="xl" style={{ fontWeight: 800, color: darkGray }}>
@@ -131,18 +131,24 @@ const SetListPage: React.FC<SetListPageProps> = (props) => {
           </Text>
         ))}
       </Group>
-      <Stack $gap="2rem" style={{ width: "calc(100% - 5rem)" }}>
+      <Stack $gap="1rem" style={{ width: "calc(100% - 5rem)" }}>
         {songList.map((song, index) => (
           <Group
             $gap="2rem"
             key={index}
             style={{
-              paddingBottom: "0.5rem",
+              paddingBottom: "0.25rem",
               borderBottom: `1px solid ${darkGray}`,
               alignItems: "center",
             }}
           >
-            <Header style={{ fontWeight: 700, color: darkGray }}>
+            <Header
+              style={{
+                fontWeight: 700,
+                color: darkGray,
+                fontFamily: "Dela Gothic One",
+              }}
+            >
               {index + 1}
             </Header>
             <Group $gap="0.5rem 0.25rem" style={{ flexWrap: "wrap" }}>

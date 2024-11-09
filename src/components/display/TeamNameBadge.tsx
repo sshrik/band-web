@@ -18,15 +18,17 @@ const TeamNameBadge: React.FC<TeamNameBadgeProps> = (props) => {
         borderRadius: "20px",
         padding: "0.25rem 0px",
         width: "100%",
+        height: "3.25rem",
         justifyContent: withArrow ? "space-between" : "center",
       }}
     >
       {withArrow && <div />}
       <Header
         style={{
-          fontFamily: "BobaeJindo",
+          fontFamily: "Jiugae",
           fontWeight: 400,
           color: red,
+          marginBottom: "-0.5rem",
         }}
       >
         {name}

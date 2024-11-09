@@ -7,7 +7,6 @@ type TypographyProps = {
   $bold?: boolean;
   $italic?: boolean;
   $underline?: boolean;
-  $ff?: "nove" | "aileron" | (string & {});
   // 12.15px, 15.3px, 16px, 17.3px, 18.7px, 20px
   $size?: "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
 };

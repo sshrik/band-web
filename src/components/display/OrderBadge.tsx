@@ -15,8 +15,8 @@ const OrderBadge: React.FC<OrderBadgeProps> = (props) => {
       style={{
         ...style,
         borderRadius: "200px",
-        width: "3rem",
-        height: "3rem",
+        width: "3.5rem",
+        height: "3.5rem",
         backgroundColor: red,
       }}
     >
@@ -24,6 +24,8 @@ const OrderBadge: React.FC<OrderBadgeProps> = (props) => {
         style={{
           color: white,
           fontWeight: 900,
+          fontFamily: "Dela Gothic One",
+          marginTop: "-0.25rem",
         }}
       >
         {order}
