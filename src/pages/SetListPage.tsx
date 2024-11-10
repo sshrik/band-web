@@ -1,8 +1,8 @@
-import { Flex, Group, PageWrapper, Stack } from "@/components/Container";
+import { Flex, Group, PageWrapper, Stack } from "@/components/base/Container";
 import OrderBadge from "@/components/display/OrderBadge";
 import TeamNameBadge from "@/components/display/TeamNameBadge";
-import Footer from "@/components/Footer";
-import { Header, Text } from "@/components/Typography";
+import Footer from "@/components/display/Footer";
+import { Header, Text } from "@/components/base/Typography";
 import { Song } from "@/models/Song";
 import { Team } from "@/models/Team";
 import { darkGray, gray } from "@/styles/color";

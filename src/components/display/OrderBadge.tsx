@@ -1,5 +1,5 @@
-import { Center } from "@/components/Container";
-import { Header } from "@/components/Typography";
+import { Center } from "@/components/base/Container";
+import { Header } from "@/components/base/Typography";
 import { red, white } from "@/styles/color";
 
 type OrderBadgeProps = {

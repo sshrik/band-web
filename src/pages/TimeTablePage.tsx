@@ -1,8 +1,8 @@
-import { Flex, Group, PageWrapper, Stack } from "@/components/Container";
+import { Flex, Group, PageWrapper, Stack } from "@/components/base/Container";
 import OrderBadge from "@/components/display/OrderBadge";
 import TeamNameBadge from "@/components/display/TeamNameBadge";
-import Footer from "@/components/Footer";
-import { Text } from "@/components/Typography";
+import Footer from "@/components/display/Footer";
+import { Text } from "@/components/base/Typography";
 import { Team } from "@/models/Team";
 import { darkGray } from "@/styles/color";
 import { useNavigate } from "react-router";

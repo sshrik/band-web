@@ -1,5 +1,5 @@
-import { Center } from "@/components/Container";
-import { Caption } from "@/components/Typography";
+import { Center } from "@/components/base/Container";
+import { Caption } from "@/components/base/Typography";
 
 type FooterProps = {
   style?: React.CSSProperties;
