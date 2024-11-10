@@ -25,7 +25,7 @@ const ConcertBrief: React.FC<ConcertBriefProps> = (props) => {
         </Group>
       </Stack>
       <Stack>
-        <Group>
+        <Group style={{ justifyContent: "center" }}>
           <Text $bold $size="xxl">
             팡타개라지
           </Text>
