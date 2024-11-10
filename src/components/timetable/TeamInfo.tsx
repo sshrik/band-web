@@ -30,7 +30,7 @@ const TeamInfo: React.FC<TeamInfoProps> = (props) => {
           $size="xl"
           style={{ paddingLeft: "1rem", color: darkGray, fontWeight: 800 }}
         >{`${startAt} - ${endAt}`}</Text>
-        <TeamNameBadge name={teamName} />
+        <TeamNameBadge name={`${teamName} >>`} />
         <Members members={members} additionalMembers={additionalMembers} />
       </Stack>
     </Group>

@@ -9,7 +9,7 @@ const TeamNameBadge: React.FC<TeamNameBadgeProps> = (props) => {
 
   return (
     <OutlineContainer
-      title={`${name} >>`}
+      title={name}
       style={{
         justifyContent: "center",
         alignItems: "center",
