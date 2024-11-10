@@ -33,9 +33,10 @@ export const Text = styled.p<TypographyProps>`
   }};
   white-space: nowrap;
   word-break: break-all;
-  font-weight: ${({ $bold }) => ($bold ? "bold" : "normal")};
-  font-style: ${({ $italic }) => ($italic ? "italic" : "normal")};
-  text-decoration: ${({ $underline }) => ($underline ? "underline" : "none")};
+  font-weight: ${({ $bold }) => ($bold ? "bold" : "inherit")};
+  font-style: ${({ $italic }) => ($italic ? "italic" : "inherit")};
+  text-decoration: ${({ $underline }) =>
+    $underline ? "underline" : "inherit"};
   font-family: ${({ $ff }) => {
     switch ($ff) {
       case "nove":
@@ -48,6 +49,7 @@ export const Text = styled.p<TypographyProps>`
         return undefined;
     }
   }};
+  color: inherit;
 `;
 
 export const Anchor = styled(Link)<TypographyProps>`

@@ -9,8 +9,8 @@ import { darkGray, gray } from "@/styles/color";
 import { useNavigate, useParams } from "react-router";
 import ChevronLeft from "@/assets/icons/chevron-left.svg?react";
 import ChevronRight from "@/assets/icons/chevron-right.svg?react";
-import SetListImage from "@/assets/images/SetListImage.png";
 import { useSwipeable } from "react-swipeable";
+import PageTitle from "@/components/base/PageTitle";
 
 type SetListPageProps = {
   teams: Team[];
@@ -88,11 +88,7 @@ const SetListPage: React.FC<SetListPageProps> = (props) => {
           onClick={handleNavigateBefore}
           style={{ marginLeft: "-0.25rem", width: "36px", height: "36px" }}
         />
-        <img
-          src={SetListImage}
-          alt="SetListImage"
-          style={{ width: "15rem", height: "auto" }}
-        />
+        <PageTitle>Set List</PageTitle>
         <ChevronRight
           onClick={handleNavigateNext}
           style={{ width: "36px", height: "36px" }}
