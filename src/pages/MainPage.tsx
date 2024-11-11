@@ -34,6 +34,13 @@ const MainPage: React.FC = () => {
             border={3}
             title="공연 순서 보러가기 >>"
             onClick={navigateToTimetable}
+            styles={{
+              header: {
+                fontSize: "1.5rem",
+                fontWeight: 400,
+                marginBottom: "-0.75rem",
+              },
+            }}
             style={{ padding: "0.5rem 1rem" }}
           />
         </Flex>

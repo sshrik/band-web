@@ -6,11 +6,14 @@ type OutlineContainerProps = {
   border?: number;
   title: string;
   style?: React.CSSProperties;
+  styles?: {
+    header?: React.CSSProperties;
+  };
   onClick?: () => void;
 };
 
 const OutlineContainer: React.FC<OutlineContainerProps> = (props) => {
-  const { border = 1, title, style, onClick } = props;
+  const { border = 1, title, style, styles: { header } = {}, onClick } = props;
 
   return (
     <Group
@@ -22,7 +25,10 @@ const OutlineContainer: React.FC<OutlineContainerProps> = (props) => {
         fontWeight: 400,
       }}
     >
-      <Header $ff="jiugae" style={{ color: red, marginBottom: "-0.5rem" }}>
+      <Header
+        $ff="jiugae"
+        style={{ ...header, color: red, marginBottom: "-0.5rem" }}
+      >
         {title}
       </Header>
     </Group>
