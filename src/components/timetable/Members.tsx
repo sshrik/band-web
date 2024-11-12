@@ -23,7 +23,7 @@ const Members: React.FC<MembersProps> = (props) => {
         {members.map((member, index) => {
           return (
             <>
-              <Text key={index} style={{ fontWeight: 400 }}>
+              <Text key={index} style={{ letterSpacing: -1, fontWeight: 400 }}>
                 {member}
               </Text>
               {index !== members.length - 1 && (

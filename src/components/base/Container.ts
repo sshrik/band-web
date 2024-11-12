@@ -58,7 +58,7 @@ export const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
-  min-height: 100vh;
+  min-height: 100svh;
   height: 100%;
   overflow-y: auto;
   justify-content: center;
@@ -66,7 +66,7 @@ export const PageWrapper = styled.div`
   gap: 0.8rem;
 
   @media (min-width: 320px) {
-    padding-top: 4rem;
+    padding-top: 3rem;
   }
 
   @media (min-width: 375px) {
@@ -74,14 +74,14 @@ export const PageWrapper = styled.div`
   }
 
   @media (min-width: 390px) {
-    padding-top: 7rem;
+    padding-top: 3rem;
   }
 
   @media (min-width: 768px) {
-    padding-top: 2rem;
+    padding-top: 3rem;
   }
 
   @media (min-width: 1000px) {
-    padding-top: 7rem;
+    padding-top: 3rem;
   }
 `;

@@ -25,14 +25,20 @@ const MemberDisplay: React.FC<MemberDisplayProps> = (props) => {
         backgroundColor: gray,
       }}
     >
-      <Group $gap="3rem" style={{ justifyContent: "center" }}>
+      <Group
+        $gap="3rem"
+        style={{ letterSpacing: -1, justifyContent: "center" }}
+      >
         {firstLine.map((member, index) => (
           <Text key={index} $size="xl">
             {member}
           </Text>
         ))}
       </Group>
-      <Group $gap="3rem" style={{ justifyContent: "center" }}>
+      <Group
+        $gap="3rem"
+        style={{ letterSpacing: -1, justifyContent: "center" }}
+      >
         {secondLine.map((member, index) => (
           <Text key={index} $size="xl">
             {member}

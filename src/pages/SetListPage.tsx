@@ -61,7 +61,7 @@ const SetListPage: React.FC<SetListPageProps> = (props) => {
   return (
     <PageWrapper
       {...handlers}
-      style={{ paddingTop: "5rem", gap: "2rem", justifyContent: "flex-start" }}
+      style={{ paddingTop: "5rem", gap: "1rem", justifyContent: "flex-start" }}
     >
       <BackButton to="/timetable">목록으로 돌아가기</BackButton>
       <Group

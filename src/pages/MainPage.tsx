@@ -18,7 +18,9 @@ const MainPage: React.FC = () => {
 
   return (
     <PageWrapper style={{ gap: 0 }}>
-      <Header $size="sm">우아한형제들 밴드의민족 겨울 정기공연</Header>
+      <Header $size="sm" style={{ paddingBottom: "1rem" }}>
+        우아한형제들 밴드의민족 겨울 정기공연
+      </Header>
       <MainTitle />
       <ConcertBrief />
       <Center style={{ paddingTop: "0.5rem", paddingBottom: "0.5rem" }}>

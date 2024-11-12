@@ -13,9 +13,9 @@ const TimeTablePage: React.FC<TimeTablePageProps> = (props) => {
   const { teams } = props;
 
   return (
-    <PageWrapper style={{ paddingTop: 0, gap: "4rem" }}>
+    <PageWrapper style={{ paddingTop: 0, gap: "1.5rem" }}>
       <BackButton to="/">홈으로 돌아가기</BackButton>
-      <Flex style={{ flex: 1 }} />
+      <Flex style={{ flex: 1, minHeight: "48px" }} />
       <PageTitle>Time Table</PageTitle>
       <Stack $gap="1.5rem" style={{ padding: "0px 1rem", width: "100%" }}>
         {teams.map((team) => (

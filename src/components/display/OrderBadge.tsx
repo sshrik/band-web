@@ -21,10 +21,10 @@ const OrderBadge: React.FC<OrderBadgeProps> = (props) => {
       }}
     >
       <Header
+        $ff="dela"
         style={{
           color: white,
           fontWeight: 900,
-          fontFamily: "Dela Gothic One",
           marginTop: "-0.25rem",
         }}
       >

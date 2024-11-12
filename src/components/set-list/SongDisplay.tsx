@@ -25,6 +25,7 @@ const SongDisplay: React.FC<SongProps> = (props) => {
           fontWeight: 700,
           color: darkGray,
           fontFamily: "Dela Gothic One",
+          marginTop: "-0.3rem",
         }}
       >
         {index + 1}

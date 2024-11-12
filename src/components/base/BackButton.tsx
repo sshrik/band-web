@@ -27,7 +27,7 @@ const BackButton: React.FC<BackButtonProps> = (props) => {
       }}
     >
       <ChevronLeft style={{ width: "12px" }} />
-      <Text $size="xs">{children}</Text>
+      <Text $size="sm">{children}</Text>
     </Group>
   );
 };
