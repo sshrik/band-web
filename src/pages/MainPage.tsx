@@ -17,18 +17,18 @@ const MainPage: React.FC = () => {
   };
 
   return (
-    <PageWrapper style={{ gap: "0.8rem" }}>
+    <PageWrapper style={{ gap: 0 }}>
       <Header $size="sm">우아한형제들 밴드의민족 겨울 정기공연</Header>
       <MainTitle />
       <ConcertBrief />
-      <Center>
+      <Center style={{ paddingTop: "0.5rem", paddingBottom: "0.5rem" }}>
         <img
           src={MainImage}
           alt="메인 이미지"
           style={{ width: "100%", maxHeight: "20rem" }}
         />
       </Center>
-      <Stack $gap="0.5rem" style={{ flex: 1, paddingBottom: "2rem" }}>
+      <Stack $gap="0.5rem" style={{ flex: 1 }}>
         <Flex style={{ justifyContent: "flex-end" }}>
           <OutlineContainer
             border={3}

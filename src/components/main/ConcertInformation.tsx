@@ -19,7 +19,7 @@ const ConcertInformation: React.FC = () => {
       <ul>
         <li>
           <Group $gap="0.25rem">
-            <Text $size="sm">공연 시간은 총 200분으로 </Text>
+            <Text $size="sm">공연 시간은 총 160분으로 </Text>
             <Text $size="sm" style={{ color: red, fontWeight: 600 }}>
               17:00부터 19:40
             </Text>
@@ -50,10 +50,10 @@ const ConcertInformation: React.FC = () => {
               <Text $bold>QR 코드</Text>
               <Text>를 통해서 자율모금을 진행하고 있으니</Text>
             </Group>
-            <Group $gap="0.25rem" $noWrap style={{ alignItems: "flex-end" }}>
+            <Group $gap="0.25rem" $noWrap style={{ alignItems: "center" }}>
               <Text> 많은 관심 부탁드립니다.</Text>
               <Text $size="xs" style={{ color: green }}>
-                카카오뱅크 12345 구세라
+                카카오뱅크 3333-31-9672767 구세라
               </Text>
             </Group>
           </Stack>

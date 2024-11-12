@@ -12,12 +12,20 @@ const MainTitle: React.FC<MainTitleProps> = (props) => {
   return (
     <Stack $gap={0} style={{ ...style, alignItems: "center" }}>
       <Header
-        $ff="dela"
-        style={{ color: red, fontSize: "5rem", marginBottom: "-1rem" }}
+        $ff="nove"
+        style={{
+          fontWeight: 400,
+          color: red,
+          fontSize: "5rem",
+          marginBottom: "-1rem",
+        }}
       >
         2024
       </Header>
-      <Header $ff="jiugae" style={{ color: red, fontSize: "4rem" }}>
+      <Header
+        $ff="jiugae"
+        style={{ color: red, letterSpacing: "-2px", fontSize: "4rem" }}
+      >
         밴드의 민족
       </Header>
     </Stack>

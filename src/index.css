@@ -159,7 +159,7 @@
 
 @font-face {
   font-family: "Nove";
-  src: url("/fonts/Nove.ttf") format("truetype");
+  src: url("/fonts/Nove.otf") format("opentype");
 }
 
 /* @font-face {
