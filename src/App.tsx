@@ -26,7 +26,7 @@ const teams: Team[] = [
   {
     startAt: "18:20",
     endAt: "19:00",
-    teamName: "민호조",
+    teamName: "초과근무(민호조)",
     members: [
       "강범준",
       "곽해솔",
