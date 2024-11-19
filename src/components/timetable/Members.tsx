@@ -15,23 +15,16 @@ const Members: React.FC<MembersProps> = (props) => {
       <Group
         $gap="0.25rem"
         style={{
-          width: members.length > 6 ? "80%" : "100%",
+          width: members.length > 6 ? "65%" : "100%",
           justifyContent: "center",
           flexWrap: "wrap",
         }}
       >
         {members.map((member, index) => {
           return (
-            <>
-              <Text key={index} style={{ letterSpacing: -1, fontWeight: 400 }}>
-                {member}
-              </Text>
-              {index !== members.length - 1 && (
-                <Text key={`${index}-dot`} style={{ fontWeight: 400 }}>
-                  ·
-                </Text>
-              )}
-            </>
+            <Text key={index} style={{ letterSpacing: -1, fontWeight: 400 }}>
+              {index === members.length - 1 ? member : `${member} ·`}
+            </Text>
           );
         })}
       </Group>
@@ -39,16 +32,9 @@ const Members: React.FC<MembersProps> = (props) => {
         <Group $gap="0.25rem" style={{ justifyContent: "center" }}>
           <Text style={{ fontWeight: 400 }}>+</Text>
           {additionalMembers.map((member, index) => (
-            <>
-              <Text key={index} style={{ fontWeight: 400 }}>
-                {member}
-              </Text>
-              {index !== additionalMembers.length - 1 && (
-                <Text key={`${index}-dot`} style={{ fontWeight: 400 }}>
-                  ·
-                </Text>
-              )}
-            </>
+            <Text key={index} style={{ fontWeight: 400 }}>
+              {index === additionalMembers.length - 1 ? member : `${member} ·`}
+            </Text>
           ))}
         </Group>
       )}

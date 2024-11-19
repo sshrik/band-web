@@ -96,7 +96,7 @@ const SetListPage: React.FC<SetListPageProps> = (props) => {
       <MemberDisplay members={members} additionalMembers={additionalMembers} />
       <Stack $gap="1rem" style={{ width: "calc(100% - 5rem)", flex: 1 }}>
         {songList.map((song, index) => (
-          <SongDisplay song={song} index={index} />
+          <SongDisplay key={index} song={song} index={index} />
         ))}
       </Stack>
       <Footer />
