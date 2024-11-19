@@ -41,7 +41,7 @@ const teams: Team[] = [
   {
     startAt: "19:00",
     endAt: "19:40",
-    teamName: "은옥조",
+    teamName: "자아실현(은옥조)",
     members: ["김경준", "박가진", "이범희", "이신아", "임현호", "조은옥"],
     teamId: 4,
   },
@@ -50,12 +50,8 @@ const teams: Team[] = [
 const songs: Song[][] = [
   [
     {
-      name: "Sweet Child O' Mine",
-      artist: "Guns N' Roses",
-    },
-    {
-      name: "아지랑이",
-      artist: "쏜애플",
+      name: "Hit Me Like a Man",
+      artist: "The Pretty Reckless",
     },
     {
       name: "Back in Time",
@@ -66,8 +62,16 @@ const songs: Song[][] = [
       artist: "이츠",
     },
     {
-      name: "Hit Me Like a Man",
-      artist: "The Pretty Reckless",
+      name: "Hi Bully",
+      artist: "터치드",
+    },
+    {
+      name: "아지랑이",
+      artist: "쏜애플",
+    },
+    {
+      name: "Sweet Child O' Mine",
+      artist: "Guns N' Roses",
     },
   ],
   [
@@ -79,20 +83,20 @@ const songs: Song[][] = [
     { name: "Welcome to the Show", artist: "DAY6" },
   ],
   [
-    { name: "대관람차", artist: "QWER" },
-    { name: "녹아내려요", artist: "DAY6" },
     { name: "Loveholic", artist: "러브홀릭" },
+    { name: "대관람차", artist: "QWER" },
     { name: "반딧불이", artist: "터치드" },
-    { name: "불꽃놀이", artist: "하현상" },
     { name: "에필로그", artist: "정승환" },
+    { name: "불꽃놀이", artist: "하현상" },
+    { name: "녹아내려요", artist: "DAY6" },
   ],
   [
-    { name: "annie.", artist: "wave to earth" },
-    { name: "Find Me!", artist: "The Poles" },
-    { name: "Destiny", artist: "SURL" },
-    { name: "Tik Tak Tok", artist: "실리카겔" },
     { name: "그건 아마 우리의 잘못은 아닐거야", artist: "백예린" },
+    { name: "annie", artist: "wave to earth" },
     { name: "민수는 혼란스럽다", artist: "민수" },
+    { name: "Find Me!", artist: "더폴스" },
+    { name: "T+Tik tak tok", artist: "실리카겔" },
+    { name: "Destiny", artist: "SURL" },
   ],
 ];
 
