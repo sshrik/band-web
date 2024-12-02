@@ -70,6 +70,10 @@ const songs: Song[][] = [
       artist: "쏜애플",
     },
     {
+      name: "Some like it hot!",
+      artist: "SPYAIR",
+    },
+    {
       name: "Sweet Child O' Mine",
       artist: "Guns N' Roses",
     },
@@ -80,7 +84,7 @@ const songs: Song[][] = [
     { name: "내게 남은 사랑을 다 줄께", artist: "왁스" },
     { name: "끝나지 않은 노래", artist: "노리플라이" },
     { name: "맞네", artist: "루시" },
-    { name: "Welcome to the Show", artist: "DAY6" },
+    { name: "Welcome to the Show", artist: "데이식스" },
   ],
   [
     { name: "Loveholic", artist: "러브홀릭" },
@@ -88,7 +92,7 @@ const songs: Song[][] = [
     { name: "반딧불이", artist: "터치드" },
     { name: "에필로그", artist: "정승환" },
     { name: "불꽃놀이", artist: "하현상" },
-    { name: "녹아내려요", artist: "DAY6" },
+    { name: "녹아내려요", artist: "데이식스" },
   ],
   [
     { name: "그건 아마 우리의 잘못은 아닐거야", artist: "백예린" },
