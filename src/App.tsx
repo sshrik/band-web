@@ -50,20 +50,20 @@ const teams: Team[] = [
 const songs: Song[][] = [
   [
     {
-      name: "Hit Me Like a Man",
-      artist: "The Pretty Reckless",
-    },
-    {
-      name: "Back in Time",
-      artist: "너드커넥션",
-    },
-    {
       name: "청록",
       artist: "이츠",
     },
     {
       name: "Hi Bully",
       artist: "터치드",
+    },
+    {
+      name: "Hit Me Like a Man",
+      artist: "The Pretty Reckless",
+    },
+    {
+      name: "Back in Time",
+      artist: "너드커넥션",
     },
     {
       name: "아지랑이",
